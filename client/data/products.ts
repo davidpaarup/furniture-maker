@@ -84,7 +84,7 @@ export const furnitureProducts: Product[] = [
     ],
     rating: 4.9,
     reviews: 47,
-    images: ["dining-table-1", "dining-table-2", "dining-table-3"],
+    images: ["https://images.pexels.com/photos/2325302/pexels-photo-2325302.jpeg", "https://images.pexels.com/photos/2317542/pexels-photo-2317542.jpeg"],
     inStock: true,
     isNew: false,
     isBestseller: true,
