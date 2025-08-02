@@ -9,56 +9,8 @@ import { useCart } from "@/hooks/useCart";
 import ProductDetailModal from "@/components/ProductDetailModal";
 import { Product, furnitureProducts } from "@/data/products";
 
-const featuredProducts = [
-  {
-    id: 1,
-    name: "Rustic Dining Table",
-    price: 1299,
-    originalPrice: 1499,
-    category: "Dining",
-    rating: 4.9,
-    reviews: 47,
-    image: "dining-table",
-    isBestseller: true,
-    isNew: false,
-  },
-  {
-    id: 2,
-    name: "Craftsman Bookshelf",
-    price: 649,
-    originalPrice: null,
-    category: "Storage",
-    rating: 4.8,
-    reviews: 32,
-    image: "bookshelf",
-    isBestseller: false,
-    isNew: true,
-  },
-  {
-    id: 3,
-    name: "Vintage Coffee Table",
-    price: 899,
-    originalPrice: 1099,
-    category: "Living Room",
-    rating: 4.7,
-    reviews: 28,
-    image: "coffee-table",
-    isBestseller: true,
-    isNew: false,
-  },
-  {
-    id: 4,
-    name: "Executive Desk",
-    price: 1799,
-    originalPrice: null,
-    category: "Office",
-    rating: 4.9,
-    reviews: 19,
-    image: "desk",
-    isBestseller: false,
-    isNew: true,
-  },
-];
+// Get featured products (first 4 products)
+const featuredProducts = furnitureProducts.slice(0, 4);
 
 export default function ProductShowcase() {
   const { addToCart } = useCart();
