@@ -47,6 +47,16 @@ export default function ProductDetailModal({
       )
     : 0;
 
+  const handleAddToCart = () => {
+    if (!product.inStock) return;
+
+    addToCart(product, quantity, selectedFinish);
+    toast({
+      title: "Added to cart!",
+      description: `${quantity} × ${product.name} ${selectedFinish ? `(${selectedFinish})` : ''} added to your cart.`,
+    });
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
