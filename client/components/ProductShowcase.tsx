@@ -29,6 +29,24 @@ export default function ProductShowcase() {
     setIsModalOpen(false);
     setSelectedProduct(null);
   };
+
+  const handleWishlistToggle = (product: Product, e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent opening product detail modal
+
+    if (isInWishlist(product.id)) {
+      removeFromWishlist(product.id);
+      toast({
+        title: "Removed from wishlist",
+        description: `${product.name} has been removed from your saved items.`,
+      });
+    } else {
+      addToWishlist(product);
+      toast({
+        title: "Saved for later!",
+        description: `${product.name} has been added to your saved items.`,
+      });
+    }
+  };
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
