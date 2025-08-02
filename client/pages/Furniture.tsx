@@ -349,17 +349,13 @@ export default function Furniture() {
                           ? "w-48 h-48 flex-shrink-0" 
                           : "aspect-square rounded-t-lg"
                       }`}>
-                        {/* Image Placeholder */}
-                        <div className="w-full h-full flex items-center justify-center">
-                          <div className="text-center space-y-2">
-                            <div className="w-16 h-16 bg-wood-300 rounded-lg mx-auto flex items-center justify-center">
-                              <ShoppingCart className="h-8 w-8 text-wood-600" />
-                            </div>
-                            <p className="text-wood-600 font-medium text-sm">
-                              {product.name}
-                            </p>
-                          </div>
-                        </div>
+                        {/* Product Image */}
+                        <img
+                          src={product.images[0]}
+                          alt={product.name}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
 
                         {/* Badges */}
                         <div className="absolute top-3 left-3 flex flex-col gap-2">
