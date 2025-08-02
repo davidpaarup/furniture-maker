@@ -63,6 +63,18 @@ const featuredProducts = [
 export default function ProductShowcase() {
   const { addToCart } = useCart();
   const { toast } = useToast();
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openProductDetail = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const closeProductDetail = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
