@@ -53,8 +53,9 @@ export default function Furniture() {
     isCustomizable: false,
   });
 
-  // Cart and toast hooks
+  // Cart, wishlist and toast hooks
   const { addToCart } = useCart();
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const { toast } = useToast();
 
   // Filter and sort products
