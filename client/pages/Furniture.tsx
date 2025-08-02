@@ -52,6 +52,10 @@ export default function Furniture() {
     isCustomizable: false,
   });
 
+  // Cart and toast hooks
+  const { addToCart } = useCart();
+  const { toast } = useToast();
+
   // Filter and sort products
   const filteredProducts = useMemo(() => {
     let filtered = furnitureProducts.filter((product) => {
