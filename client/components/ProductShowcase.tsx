@@ -58,6 +58,8 @@ const featuredProducts = [
 ];
 
 export default function ProductShowcase() {
+  const { addToCart } = useCart();
+  const { toast } = useToast();
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
