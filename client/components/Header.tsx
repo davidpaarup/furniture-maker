@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useCart } from "@/hooks/useCart";
 import { useWishlist } from "@/hooks/useWishlist";
 import CartDrawer from "@/components/CartDrawer";
+import WishlistDrawer from "@/components/WishlistDrawer";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
