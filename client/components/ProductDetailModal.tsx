@@ -235,6 +235,7 @@ export default function ProductDetailModal({
                 className="w-full bg-wood-600 hover:bg-wood-700"
                 size="lg"
                 disabled={!product.inStock}
+                onClick={handleAddToCart}
               >
                 <ShoppingCart className="mr-2 h-5 w-5" />
                 Add to Cart - ${(product.price * quantity).toLocaleString()}
