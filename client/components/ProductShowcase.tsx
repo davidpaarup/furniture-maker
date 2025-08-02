@@ -211,6 +211,13 @@ export default function ProductShowcase() {
           </Button>
         </div>
       </div>
+
+      {/* Product Detail Modal */}
+      <ProductDetailModal
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={closeProductDetail}
+      />
     </section>
   );
 }
