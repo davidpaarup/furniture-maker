@@ -36,6 +36,8 @@ export default function ProductDetailModal({
   const [selectedFinish, setSelectedFinish] = useState<string>("");
   const [quantity, setQuantity] = useState(1);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { addToCart } = useCart();
+  const { toast } = useToast();
 
   if (!isOpen || !product) return null;
 
