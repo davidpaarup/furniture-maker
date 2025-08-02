@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { useCart } from "@/hooks/useCart";
+import { useWishlist } from "@/hooks/useWishlist";
 import ProductDetailModal from "@/components/ProductDetailModal";
 import { Product, furnitureProducts } from "@/data/products";
 
