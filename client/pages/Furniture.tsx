@@ -22,6 +22,8 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Separator } from "@/components/ui/separator";
+import { useToast } from "@/hooks/use-toast";
+import { useCart } from "@/hooks/useCart";
 import {
   furnitureProducts,
   categories,
