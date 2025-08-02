@@ -59,6 +59,22 @@ export default function ProductDetailModal({
     });
   };
 
+  const handleWishlistToggle = () => {
+    if (isInWishlist(product.id)) {
+      removeFromWishlist(product.id);
+      toast({
+        title: "Removed from wishlist",
+        description: `${product.name} has been removed from your saved items.`,
+      });
+    } else {
+      addToWishlist(product);
+      toast({
+        title: "Saved for later!",
+        description: `${product.name} has been added to your saved items.`,
+      });
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
