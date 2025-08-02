@@ -60,8 +60,24 @@ export default function Header() {
               </Link>
             </nav>
 
-            {/* Cart and Mobile Menu */}
+            {/* Wishlist, Cart and Mobile Menu */}
             <div className="flex items-center space-x-4">
+              {/* Wishlist Button */}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="relative"
+                onClick={() => setIsWishlistOpen(true)}
+              >
+                <Heart className="h-5 w-5" />
+                {wishlistItems.length > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                    {wishlistItems.length}
+                  </span>
+                )}
+              </Button>
+
+              {/* Cart Button */}
               <Button
                 variant="ghost"
                 size="icon"
