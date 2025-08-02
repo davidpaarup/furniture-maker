@@ -68,9 +68,11 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
                     }`}
                     onClick={() => setCurrentImageIndex(index)}
                   >
-                    <div className="w-full h-full bg-wood-100 rounded flex items-center justify-center">
-                      <span className="text-xs text-wood-600">{index + 1}</span>
-                    </div>
+                    <img
+                      src={product.images[index]}
+                      alt={`${product.name} thumbnail ${index + 1}`}
+                      className="w-full h-full object-cover rounded"
+                    />
                   </button>
                 ))}
               </div>
