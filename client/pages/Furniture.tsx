@@ -497,12 +497,9 @@ export default function Furniture() {
                           variant="ghost"
                           size="icon"
                           className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-white hover:bg-wood-50 shadow-sm"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            // Handle wishlist toggle
-                          }}
+                          onClick={(e) => handleWishlistToggle(product, e)}
                         >
-                          <Heart className="h-4 w-4" />
+                          <Heart className={`h-4 w-4 ${isInWishlist(product.id) ? 'fill-current text-red-500' : ''}`} />
                         </Button>
                       </div>
 
