@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { useCart } from "@/hooks/useCart";
 import ProductDetailModal from "@/components/ProductDetailModal";
-import { Product } from "@/data/products";
+import { Product, furnitureProducts } from "@/data/products";
 
 const featuredProducts = [
   {
