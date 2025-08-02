@@ -53,7 +53,7 @@ export default function ProductDetailModal({
     addToCart(product, quantity, selectedFinish);
     toast({
       title: "Added to cart!",
-      description: `${quantity} × ${product.name} ${selectedFinish ? `(${selectedFinish})` : ''} added to your cart.`,
+      description: `${quantity} × ${product.name} ${selectedFinish ? `(${selectedFinish})` : ""} added to your cart.`,
     });
   };
 
