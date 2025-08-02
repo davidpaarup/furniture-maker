@@ -20,32 +20,32 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="text-foreground hover:text-wood-600 transition-colors font-medium"
             >
               Home
             </Link>
-            <Link 
-              to="/furniture" 
+            <Link
+              to="/furniture"
               className="text-foreground hover:text-wood-600 transition-colors font-medium"
             >
               Furniture
             </Link>
-            <Link 
-              to="/custom" 
+            <Link
+              to="/custom"
               className="text-foreground hover:text-wood-600 transition-colors font-medium"
             >
               Custom Orders
             </Link>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className="text-foreground hover:text-wood-600 transition-colors font-medium"
             >
               About
             </Link>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="text-foreground hover:text-wood-600 transition-colors font-medium"
             >
               Contact
@@ -68,7 +68,11 @@ export default function Header() {
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
@@ -77,36 +81,36 @@ export default function Header() {
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t">
             <div className="flex flex-col space-y-3">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="text-foreground hover:text-wood-600 transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
-              <Link 
-                to="/furniture" 
+              <Link
+                to="/furniture"
                 className="text-foreground hover:text-wood-600 transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Furniture
               </Link>
-              <Link 
-                to="/custom" 
+              <Link
+                to="/custom"
                 className="text-foreground hover:text-wood-600 transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Custom Orders
               </Link>
-              <Link 
-                to="/about" 
+              <Link
+                to="/about"
                 className="text-foreground hover:text-wood-600 transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About
               </Link>
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="text-foreground hover:text-wood-600 transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >

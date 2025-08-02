@@ -14,13 +14,15 @@ export default function AboutSection() {
                 Crafting Excellence Since 2009
               </h2>
               <p className="text-wood-600 leading-relaxed">
-                At WoodCraft, we believe that furniture should be more than just functional—it should tell a story. 
-                Our master craftsmen combine traditional woodworking techniques with contemporary design to create 
-                pieces that will be treasured for generations.
+                At WoodCraft, we believe that furniture should be more than just
+                functional—it should tell a story. Our master craftsmen combine
+                traditional woodworking techniques with contemporary design to
+                create pieces that will be treasured for generations.
               </p>
               <p className="text-wood-600 leading-relaxed">
-                Every piece is handcrafted in our workshop using sustainably sourced wood, ensuring that your 
-                furniture is not only beautiful but also environmentally responsible.
+                Every piece is handcrafted in our workshop using sustainably
+                sourced wood, ensuring that your furniture is not only beautiful
+                but also environmentally responsible.
               </p>
             </div>
 
@@ -29,7 +31,9 @@ export default function AboutSection() {
                 <div className="w-12 h-12 bg-wood-100 rounded-lg flex items-center justify-center">
                   <Leaf className="h-6 w-6 text-wood-600" />
                 </div>
-                <h3 className="font-semibold text-wood-900">Sustainable Wood</h3>
+                <h3 className="font-semibold text-wood-900">
+                  Sustainable Wood
+                </h3>
                 <p className="text-sm text-wood-600">
                   Only responsibly sourced materials from certified forests.
                 </p>
@@ -38,9 +42,12 @@ export default function AboutSection() {
                 <div className="w-12 h-12 bg-wood-100 rounded-lg flex items-center justify-center">
                   <Shield className="h-6 w-6 text-wood-600" />
                 </div>
-                <h3 className="font-semibold text-wood-900">Lifetime Warranty</h3>
+                <h3 className="font-semibold text-wood-900">
+                  Lifetime Warranty
+                </h3>
                 <p className="text-sm text-wood-600">
-                  We stand behind our craftsmanship with a comprehensive warranty.
+                  We stand behind our craftsmanship with a comprehensive
+                  warranty.
                 </p>
               </div>
               <div className="space-y-3">
@@ -64,9 +71,7 @@ export default function AboutSection() {
             </div>
 
             <Button asChild size="lg" className="bg-wood-600 hover:bg-wood-700">
-              <Link to="/about">
-                Learn More About Us
-              </Link>
+              <Link to="/about">Learn More About Us</Link>
             </Button>
           </div>
 

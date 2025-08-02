@@ -65,15 +65,18 @@ export default function ProductShowcase() {
             Featured Collection
           </h2>
           <p className="text-wood-600 max-w-2xl mx-auto leading-relaxed">
-            Discover our handpicked selection of premium wooden furniture, 
-            each piece carefully crafted to bring warmth and elegance to your space.
+            Discover our handpicked selection of premium wooden furniture, each
+            piece carefully crafted to bring warmth and elegance to your space.
           </p>
         </div>
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {featuredProducts.map((product) => (
-            <Card key={product.id} className="group cursor-pointer hover:shadow-xl transition-all duration-300 border-wood-200">
+            <Card
+              key={product.id}
+              className="group cursor-pointer hover:shadow-xl transition-all duration-300 border-wood-200"
+            >
               <CardContent className="p-0">
                 {/* Product Image */}
                 <div className="relative aspect-square bg-gradient-to-br from-wood-100 to-wood-200 rounded-t-lg overflow-hidden">
@@ -83,17 +86,26 @@ export default function ProductShowcase() {
                       <div className="w-16 h-16 bg-wood-300 rounded-lg mx-auto flex items-center justify-center">
                         <ShoppingCart className="h-8 w-8 text-wood-600" />
                       </div>
-                      <p className="text-wood-600 font-medium text-sm">{product.name}</p>
+                      <p className="text-wood-600 font-medium text-sm">
+                        {product.name}
+                      </p>
                     </div>
                   </div>
-                  
+
                   {/* Badges */}
                   <div className="absolute top-3 left-3 flex flex-col gap-2">
                     {product.isBestseller && (
-                      <Badge className="bg-wood-600 text-white">Bestseller</Badge>
+                      <Badge className="bg-wood-600 text-white">
+                        Bestseller
+                      </Badge>
                     )}
                     {product.isNew && (
-                      <Badge variant="secondary" className="bg-green-100 text-green-800">New</Badge>
+                      <Badge
+                        variant="secondary"
+                        className="bg-green-100 text-green-800"
+                      >
+                        New
+                      </Badge>
                     )}
                   </div>
 
@@ -108,7 +120,10 @@ export default function ProductShowcase() {
 
                   {/* Quick Shop Button */}
                   <div className="absolute inset-x-3 bottom-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Button className="w-full bg-wood-600 hover:bg-wood-700" size="sm">
+                    <Button
+                      className="w-full bg-wood-600 hover:bg-wood-700"
+                      size="sm"
+                    >
                       Quick Shop
                     </Button>
                   </div>
@@ -117,7 +132,9 @@ export default function ProductShowcase() {
                 {/* Product Info */}
                 <div className="p-4 space-y-3">
                   <div>
-                    <p className="text-sm text-wood-500 font-medium">{product.category}</p>
+                    <p className="text-sm text-wood-500 font-medium">
+                      {product.category}
+                    </p>
                     <h3 className="font-semibold text-wood-900 group-hover:text-wood-600 transition-colors">
                       {product.name}
                     </h3>
@@ -161,10 +178,13 @@ export default function ProductShowcase() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <Button asChild size="lg" variant="outline" className="border-wood-600 text-wood-600 hover:bg-wood-50">
-            <Link to="/furniture">
-              View All Furniture
-            </Link>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="border-wood-600 text-wood-600 hover:bg-wood-50"
+          >
+            <Link to="/furniture">View All Furniture</Link>
           </Button>
         </div>
       </div>

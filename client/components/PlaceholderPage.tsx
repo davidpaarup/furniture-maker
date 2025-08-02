@@ -9,10 +9,10 @@ interface PlaceholderPageProps {
   suggestedAction?: string;
 }
 
-export default function PlaceholderPage({ 
-  title, 
-  description, 
-  suggestedAction = "Continue prompting to fill in this page content" 
+export default function PlaceholderPage({
+  title,
+  description,
+  suggestedAction = "Continue prompting to fill in this page content",
 }: PlaceholderPageProps) {
   return (
     <main className="min-h-screen bg-background py-20">
@@ -23,7 +23,7 @@ export default function PlaceholderPage({
               <div className="w-16 h-16 bg-wood-100 rounded-full mx-auto flex items-center justify-center">
                 <MessageCircle className="h-8 w-8 text-wood-600" />
               </div>
-              
+
               <div className="space-y-4">
                 <h1 className="text-3xl font-bold text-wood-900">{title}</h1>
                 <p className="text-wood-600 leading-relaxed">{description}</p>
@@ -36,7 +36,11 @@ export default function PlaceholderPage({
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild variant="outline" className="border-wood-600 text-wood-600 hover:bg-wood-50">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-wood-600 text-wood-600 hover:bg-wood-50"
+                >
                   <Link to="/">
                     <ArrowLeft className="mr-2 h-4 w-4" />
                     Back to Home

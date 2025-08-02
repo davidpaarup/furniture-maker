@@ -1,4 +1,11 @@
-import { Mail, Phone, MapPin, Instagram, Facebook, Twitter } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Facebook,
+  Twitter,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -15,17 +22,27 @@ export default function Footer() {
               <span className="font-bold text-xl text-wood-100">WoodCraft</span>
             </div>
             <p className="text-wood-200 text-sm leading-relaxed">
-              Handcrafted wooden furniture made with passion and precision. 
-              Each piece tells a story of traditional craftsmanship and modern design.
+              Handcrafted wooden furniture made with passion and precision. Each
+              piece tells a story of traditional craftsmanship and modern
+              design.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-wood-300 hover:text-wood-100 transition-colors">
+              <a
+                href="#"
+                className="text-wood-300 hover:text-wood-100 transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-wood-300 hover:text-wood-100 transition-colors">
+              <a
+                href="#"
+                className="text-wood-300 hover:text-wood-100 transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-wood-300 hover:text-wood-100 transition-colors">
+              <a
+                href="#"
+                className="text-wood-300 hover:text-wood-100 transition-colors"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
             </div>
@@ -35,16 +52,28 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold text-wood-100">Quick Links</h3>
             <nav className="space-y-2">
-              <Link to="/furniture" className="block text-wood-200 hover:text-wood-100 transition-colors text-sm">
+              <Link
+                to="/furniture"
+                className="block text-wood-200 hover:text-wood-100 transition-colors text-sm"
+              >
                 Our Furniture
               </Link>
-              <Link to="/custom" className="block text-wood-200 hover:text-wood-100 transition-colors text-sm">
+              <Link
+                to="/custom"
+                className="block text-wood-200 hover:text-wood-100 transition-colors text-sm"
+              >
                 Custom Orders
               </Link>
-              <Link to="/about" className="block text-wood-200 hover:text-wood-100 transition-colors text-sm">
+              <Link
+                to="/about"
+                className="block text-wood-200 hover:text-wood-100 transition-colors text-sm"
+              >
                 About Us
               </Link>
-              <Link to="/contact" className="block text-wood-200 hover:text-wood-100 transition-colors text-sm">
+              <Link
+                to="/contact"
+                className="block text-wood-200 hover:text-wood-100 transition-colors text-sm"
+              >
                 Contact
               </Link>
             </nav>
@@ -68,7 +97,8 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-wood-400 flex-shrink-0" />
                 <span className="text-wood-200 text-sm">
-                  123 Craftsman Lane<br />
+                  123 Craftsman Lane
+                  <br />
                   Woodville, WV 12345
                 </span>
               </div>
@@ -78,7 +108,9 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-wood-400 flex-shrink-0" />
-                <span className="text-wood-200 text-sm">hello@woodcraft.com</span>
+                <span className="text-wood-200 text-sm">
+                  hello@woodcraft.com
+                </span>
               </div>
             </div>
           </div>
