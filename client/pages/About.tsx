@@ -1,4 +1,13 @@
-import { Award, Users, Leaf, Heart, Hammer, Shield, TreePine, Recycle } from "lucide-react";
+import {
+  Award,
+  Users,
+  Leaf,
+  Heart,
+  Hammer,
+  Shield,
+  TreePine,
+  Recycle,
+} from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -12,7 +21,8 @@ export default function About() {
       experience: "25+ years",
       specialization: "Traditional Joinery & Custom Design",
       bio: "Marcus founded WoodCraft with a vision to preserve traditional woodworking techniques while creating furniture for modern living. His passion for sustainable craftsmanship drives every piece we create.",
-      image: "https://images.pexels.com/photos/5095283/pexels-photo-5095283.jpeg",
+      image:
+        "https://images.pexels.com/photos/5095283/pexels-photo-5095283.jpeg",
     },
     {
       name: "Sarah Chen",
@@ -20,7 +30,8 @@ export default function About() {
       experience: "12+ years",
       specialization: "Modern Design & Space Planning",
       bio: "Sarah brings contemporary design sensibilities to our traditional craft. Her expertise in ergonomics and space planning ensures every piece is both beautiful and functional.",
-      image: "https://images.pexels.com/photos/5095283/pexels-photo-5095283.jpeg",
+      image:
+        "https://images.pexels.com/photos/5095283/pexels-photo-5095283.jpeg",
     },
     {
       name: "David Rodriguez",
@@ -28,7 +39,8 @@ export default function About() {
       experience: "18+ years",
       specialization: "Wood Finishing & Restoration",
       bio: "David's mastery of wood finishing techniques brings out the natural beauty in every piece. His restoration work has saved countless antique pieces for future generations.",
-      image: "https://images.pexels.com/photos/5095283/pexels-photo-5095283.jpeg",
+      image:
+        "https://images.pexels.com/photos/5095283/pexels-photo-5095283.jpeg",
     },
     {
       name: "Emma Wilson",
@@ -36,40 +48,67 @@ export default function About() {
       experience: "8+ years",
       specialization: "Sustainable Sourcing & Environmental Impact",
       bio: "Emma ensures our commitment to environmental responsibility. She manages our sustainable sourcing program and oversees our carbon-neutral workshop operations.",
-      image: "https://images.pexels.com/photos/5095283/pexels-photo-5095283.jpeg",
+      image:
+        "https://images.pexels.com/photos/5095283/pexels-photo-5095283.jpeg",
     },
   ];
 
   const workshopStations = [
     {
       name: "Design Studio",
-      description: "Where ideas come to life through sketches, 3D modeling, and material selection.",
-      tools: ["CAD Workstations", "Material Library", "Scale Models", "Client Meeting Space"],
+      description:
+        "Where ideas come to life through sketches, 3D modeling, and material selection.",
+      tools: [
+        "CAD Workstations",
+        "Material Library",
+        "Scale Models",
+        "Client Meeting Space",
+      ],
     },
     {
       name: "Lumber Mill",
-      description: "Processing sustainably sourced timber with precision milling and drying.",
+      description:
+        "Processing sustainably sourced timber with precision milling and drying.",
       tools: ["Band Saws", "Planer", "Kiln Dryer", "Moisture Meters"],
     },
     {
       name: "Traditional Workshop",
-      description: "Hand tools and traditional techniques for detailed craftwork and joinery.",
-      tools: ["Hand Planes", "Chisels", "Mortise Machines", "Sharpening Station"],
+      description:
+        "Hand tools and traditional techniques for detailed craftwork and joinery.",
+      tools: [
+        "Hand Planes",
+        "Chisels",
+        "Mortise Machines",
+        "Sharpening Station",
+      ],
     },
     {
       name: "Modern Workshop",
-      description: "CNC machines and modern tools for precision cutting and shaping.",
+      description:
+        "CNC machines and modern tools for precision cutting and shaping.",
       tools: ["CNC Router", "Table Saws", "Router Tables", "Dust Collection"],
     },
     {
       name: "Finishing Room",
-      description: "Climate-controlled environment for applying stains, oils, and protective coatings.",
-      tools: ["Spray Booths", "Drying Racks", "Color Matching", "Quality Control"],
+      description:
+        "Climate-controlled environment for applying stains, oils, and protective coatings.",
+      tools: [
+        "Spray Booths",
+        "Drying Racks",
+        "Color Matching",
+        "Quality Control",
+      ],
     },
     {
       name: "Assembly & Quality",
-      description: "Final assembly, hardware installation, and rigorous quality inspection.",
-      tools: ["Assembly Tables", "Hardware Station", "Quality Checklist", "Photography Setup"],
+      description:
+        "Final assembly, hardware installation, and rigorous quality inspection.",
+      tools: [
+        "Assembly Tables",
+        "Hardware Station",
+        "Quality Checklist",
+        "Photography Setup",
+      ],
     },
   ];
 
@@ -77,25 +116,30 @@ export default function About() {
     {
       icon: TreePine,
       title: "Sustainable Sourcing",
-      description: "100% of our wood comes from FSC-certified forests and responsible suppliers.",
-      metrics: "1,200+ trees planted annually through our reforestation program",
+      description:
+        "100% of our wood comes from FSC-certified forests and responsible suppliers.",
+      metrics:
+        "1,200+ trees planted annually through our reforestation program",
     },
     {
       icon: Recycle,
       title: "Zero Waste Workshop",
-      description: "Wood scraps become smaller items, sawdust for composting, and offcuts for fuel.",
+      description:
+        "Wood scraps become smaller items, sawdust for composting, and offcuts for fuel.",
       metrics: "95% waste diversion rate from landfills",
     },
     {
       icon: Leaf,
       title: "Carbon Neutral Operations",
-      description: "Solar-powered workshop with renewable energy and carbon offset programs.",
+      description:
+        "Solar-powered workshop with renewable energy and carbon offset programs.",
       metrics: "Net-zero carbon footprint since 2020",
     },
     {
       icon: Shield,
       title: "Non-Toxic Finishes",
-      description: "All finishes are water-based, VOC-free, and safe for indoor air quality.",
+      description:
+        "All finishes are water-based, VOC-free, and safe for indoor air quality.",
       metrics: "Zero harmful chemicals in our finishing process",
     },
   ];
@@ -110,9 +154,10 @@ export default function About() {
               Our Story
             </h1>
             <p className="text-xl text-wood-600 max-w-3xl mx-auto leading-relaxed">
-              For over 15 years, WoodCraft has been dedicated to creating heirloom-quality 
-              furniture that tells a story. Every piece we craft represents our commitment 
-              to traditional techniques, sustainable practices, and timeless design.
+              For over 15 years, WoodCraft has been dedicated to creating
+              heirloom-quality furniture that tells a story. Every piece we
+              craft represents our commitment to traditional techniques,
+              sustainable practices, and timeless design.
             </p>
           </div>
         </div>
@@ -128,25 +173,29 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-wood-700 leading-relaxed">
                 <p>
-                  WoodCraft began in 2009 when Marcus Thompson, a third-generation woodworker, 
-                  decided to follow his passion for creating furniture that would last generations. 
-                  Growing up in his grandfather's workshop, Marcus learned that true craftsmanship 
-                  isn't just about skill—it's about respect for the material, the process, and 
-                  the people who will live with your creations.
+                  WoodCraft began in 2009 when Marcus Thompson, a
+                  third-generation woodworker, decided to follow his passion for
+                  creating furniture that would last generations. Growing up in
+                  his grandfather's workshop, Marcus learned that true
+                  craftsmanship isn't just about skill—it's about respect for
+                  the material, the process, and the people who will live with
+                  your creations.
                 </p>
                 <p>
-                  After working for large furniture manufacturers for over a decade, Marcus felt 
-                  disconnected from the heart of woodworking. He wanted to return to the roots 
-                  of the craft—where every joint is cut by hand, every finish is applied with 
-                  care, and every piece tells a unique story.
+                  After working for large furniture manufacturers for over a
+                  decade, Marcus felt disconnected from the heart of
+                  woodworking. He wanted to return to the roots of the
+                  craft—where every joint is cut by hand, every finish is
+                  applied with care, and every piece tells a unique story.
                 </p>
                 <p>
-                  What started as a one-man operation in a small garage has grown into a team 
-                  of passionate craftspeople, but our core values remain unchanged: quality over 
-                  quantity, sustainability over profit, and craftsmanship over convenience.
+                  What started as a one-man operation in a small garage has
+                  grown into a team of passionate craftspeople, but our core
+                  values remain unchanged: quality over quantity, sustainability
+                  over profit, and craftsmanship over convenience.
                 </p>
               </div>
-              
+
               <div className="flex items-center space-x-8">
                 <div className="text-center">
                   <p className="text-3xl font-bold text-wood-800">15+</p>
@@ -171,18 +220,22 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Quote Card */}
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-wood-100 max-w-sm">
                 <div className="space-y-3">
                   <p className="text-wood-700 italic">
-                    "Every piece of wood has a story. Our job is to honor that story 
-                    while creating something beautiful and lasting."
+                    "Every piece of wood has a story. Our job is to honor that
+                    story while creating something beautiful and lasting."
                   </p>
                   <div className="flex items-center space-x-3">
                     <div>
-                      <p className="font-semibold text-wood-900">Marcus Thompson</p>
-                      <p className="text-sm text-wood-600">Founder & Master Craftsman</p>
+                      <p className="font-semibold text-wood-900">
+                        Marcus Thompson
+                      </p>
+                      <p className="text-sm text-wood-600">
+                        Founder & Master Craftsman
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -200,8 +253,8 @@ export default function About() {
               Meet Our Team
             </h2>
             <p className="text-wood-600 max-w-2xl mx-auto">
-              Our diverse team brings together traditional craftsmanship, modern design, 
-              and sustainable practices to create exceptional furniture.
+              Our diverse team brings together traditional craftsmanship, modern
+              design, and sustainable practices to create exceptional furniture.
             </p>
           </div>
 
@@ -223,12 +276,16 @@ export default function About() {
                       {member.experience}
                     </Badge>
                   </div>
-                  
+
                   <div>
-                    <p className="text-sm font-medium text-wood-800 mb-1">Specialization:</p>
-                    <p className="text-sm text-wood-600">{member.specialization}</p>
+                    <p className="text-sm font-medium text-wood-800 mb-1">
+                      Specialization:
+                    </p>
+                    <p className="text-sm text-wood-600">
+                      {member.specialization}
+                    </p>
                   </div>
-                  
+
                   <p className="text-sm text-wood-700 leading-relaxed">
                     {member.bio}
                   </p>
@@ -247,8 +304,8 @@ export default function About() {
               Workshop Tour
             </h2>
             <p className="text-wood-600 max-w-2xl mx-auto">
-              Take a virtual journey through our 8,000 square foot workshop where 
-              traditional techniques meet modern precision.
+              Take a virtual journey through our 8,000 square foot workshop
+              where traditional techniques meet modern precision.
             </p>
           </div>
 
@@ -263,12 +320,17 @@ export default function About() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-wood-600">{station.description}</p>
-                  
+
                   <div>
-                    <h4 className="font-semibold text-wood-800 mb-2">Equipment & Tools:</h4>
+                    <h4 className="font-semibold text-wood-800 mb-2">
+                      Equipment & Tools:
+                    </h4>
                     <div className="grid grid-cols-2 gap-1">
                       {station.tools.map((tool, toolIndex) => (
-                        <div key={toolIndex} className="text-sm text-wood-600 flex items-center">
+                        <div
+                          key={toolIndex}
+                          className="text-sm text-wood-600 flex items-center"
+                        >
                           <span className="w-1 h-1 bg-wood-400 rounded-full mr-2" />
                           {tool}
                         </div>
@@ -287,14 +349,15 @@ export default function About() {
                   <div className="w-16 h-16 bg-wood-200 rounded-full flex items-center justify-center mx-auto">
                     <Users className="h-8 w-8 text-wood-600" />
                   </div>
-                  
+
                   <div>
                     <h3 className="text-2xl font-bold text-wood-900 mb-4">
                       Visit Our Workshop
                     </h3>
                     <p className="text-wood-600 max-w-2xl mx-auto mb-6">
-                      We welcome visitors to see our craftspeople at work. Schedule a guided tour 
-                      to experience the sights, sounds, and smells of traditional woodworking.
+                      We welcome visitors to see our craftspeople at work.
+                      Schedule a guided tour to experience the sights, sounds,
+                      and smells of traditional woodworking.
                     </p>
                   </div>
 
@@ -302,7 +365,10 @@ export default function About() {
                     <Button asChild className="bg-wood-600 hover:bg-wood-700">
                       <Link to="/contact">Schedule a Tour</Link>
                     </Button>
-                    <Button variant="outline" className="border-wood-600 text-wood-600">
+                    <Button
+                      variant="outline"
+                      className="border-wood-600 text-wood-600"
+                    >
                       Watch Virtual Tour
                     </Button>
                   </div>
@@ -321,9 +387,9 @@ export default function About() {
               Our Commitment to Sustainability
             </h2>
             <p className="text-wood-600 max-w-3xl mx-auto">
-              We believe in responsible craftsmanship that honors both the environment 
-              and future generations. Our sustainability initiatives go beyond compliance—
-              they're at the heart of everything we do.
+              We believe in responsible craftsmanship that honors both the
+              environment and future generations. Our sustainability initiatives
+              go beyond compliance— they're at the heart of everything we do.
             </p>
           </div>
 
@@ -335,7 +401,7 @@ export default function About() {
                     <div className="w-12 h-12 bg-wood-200 rounded-lg flex items-center justify-center flex-shrink-0">
                       <commitment.icon className="h-6 w-6 text-wood-600" />
                     </div>
-                    
+
                     <div className="space-y-3">
                       <h3 className="text-xl font-bold text-wood-900">
                         {commitment.title}
@@ -371,27 +437,30 @@ export default function About() {
                   </div>
                   <h4 className="font-bold text-wood-900">FSC Certified</h4>
                   <p className="text-sm text-wood-600">
-                    Forest Stewardship Council certified for responsible wood sourcing
+                    Forest Stewardship Council certified for responsible wood
+                    sourcing
                   </p>
                 </div>
-                
+
                 <div className="space-y-3">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
                     <Leaf className="h-8 w-8 text-blue-600" />
                   </div>
                   <h4 className="font-bold text-wood-900">Carbon Neutral</h4>
                   <p className="text-sm text-wood-600">
-                    Verified carbon-neutral operations through renewable energy and offsets
+                    Verified carbon-neutral operations through renewable energy
+                    and offsets
                   </p>
                 </div>
-                
+
                 <div className="space-y-3">
                   <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto">
                     <Heart className="h-8 w-8 text-purple-600" />
                   </div>
                   <h4 className="font-bold text-wood-900">B-Corp Pending</h4>
                   <p className="text-sm text-wood-600">
-                    Currently pursuing B-Corporation certification for social and environmental performance
+                    Currently pursuing B-Corporation certification for social
+                    and environmental performance
                   </p>
                 </div>
               </div>
@@ -410,15 +479,25 @@ export default function About() {
                   Ready to Create Something Beautiful?
                 </h2>
                 <p className="text-xl text-wood-600 max-w-2xl mx-auto">
-                  Whether you're looking for a single statement piece or furnishing 
-                  an entire home, we're here to bring your vision to life.
+                  Whether you're looking for a single statement piece or
+                  furnishing an entire home, we're here to bring your vision to
+                  life.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" className="bg-wood-600 hover:bg-wood-700">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-wood-600 hover:bg-wood-700"
+                  >
                     <Link to="/custom">Start Custom Project</Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="border-wood-600 text-wood-600">
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="border-wood-600 text-wood-600"
+                  >
                     <Link to="/furniture">Browse Collection</Link>
                   </Button>
                 </div>

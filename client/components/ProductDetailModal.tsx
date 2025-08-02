@@ -265,8 +265,10 @@ export default function ProductDetailModal({
                   className="flex-1"
                   onClick={handleWishlistToggle}
                 >
-                  <Heart className={`mr-2 h-4 w-4 ${isInWishlist(product.id) ? 'fill-current text-red-500' : ''}`} />
-                  {isInWishlist(product.id) ? 'Saved' : 'Save for Later'}
+                  <Heart
+                    className={`mr-2 h-4 w-4 ${isInWishlist(product.id) ? "fill-current text-red-500" : ""}`}
+                  />
+                  {isInWishlist(product.id) ? "Saved" : "Save for Later"}
                 </Button>
                 <Button variant="outline" className="flex-1">
                   Share

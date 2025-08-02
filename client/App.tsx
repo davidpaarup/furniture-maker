@@ -24,25 +24,25 @@ const App = () => (
     <TooltipProvider>
       <WishlistProvider>
         <CartProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <div className="flex-1">
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/furniture" element={<Furniture />} />
-                <Route path="/custom" element={<Custom />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <div className="min-h-screen flex flex-col">
+              <Header />
+              <div className="flex-1">
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/furniture" element={<Furniture />} />
+                  <Route path="/custom" element={<Custom />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </div>
+              <Footer />
             </div>
-            <Footer />
-          </div>
-        </BrowserRouter>
+          </BrowserRouter>
         </CartProvider>
       </WishlistProvider>
     </TooltipProvider>
