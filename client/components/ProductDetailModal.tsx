@@ -1,9 +1,23 @@
 import { useState } from "react";
-import { X, Star, Heart, ShoppingCart, Truck, Shield, Clock } from "lucide-react";
+import {
+  X,
+  Star,
+  Heart,
+  ShoppingCart,
+  Truck,
+  Shield,
+  Clock,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Product } from "@/data/products";
 
 interface ProductDetailModalProps {
@@ -12,25 +26,31 @@ interface ProductDetailModalProps {
   onClose: () => void;
 }
 
-export default function ProductDetailModal({ product, isOpen, onClose }: ProductDetailModalProps) {
+export default function ProductDetailModal({
+  product,
+  isOpen,
+  onClose,
+}: ProductDetailModalProps) {
   const [selectedFinish, setSelectedFinish] = useState<string>("");
   const [quantity, setQuantity] = useState(1);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   if (!isOpen || !product) return null;
 
-  const discountPercentage = product.originalPrice 
-    ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
+  const discountPercentage = product.originalPrice
+    ? Math.round(
+        ((product.originalPrice - product.price) / product.originalPrice) * 100,
+      )
     : 0;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       {/* Backdrop */}
-      <div 
+      <div
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
       />
-      
+
       {/* Modal */}
       <div className="relative bg-background rounded-lg shadow-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
         {/* Close Button */}
@@ -62,8 +82,8 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
                   <button
                     key={index}
                     className={`w-16 h-16 rounded border-2 transition-colors ${
-                      currentImageIndex === index 
-                        ? "border-wood-500" 
+                      currentImageIndex === index
+                        ? "border-wood-500"
                         : "border-wood-200 hover:border-wood-300"
                     }`}
                     onClick={() => setCurrentImageIndex(index)}
@@ -94,9 +114,11 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
                   <Badge className="bg-wood-600 text-white">Bestseller</Badge>
                 )}
               </div>
-              
-              <h1 className="text-2xl font-bold text-wood-900">{product.name}</h1>
-              
+
+              <h1 className="text-2xl font-bold text-wood-900">
+                {product.name}
+              </h1>
+
               {/* Rating */}
               <div className="flex items-center space-x-2">
                 <div className="flex">
@@ -142,7 +164,9 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
             </div>
 
             {/* Description */}
-            <p className="text-wood-700 leading-relaxed">{product.description}</p>
+            <p className="text-wood-700 leading-relaxed">
+              {product.description}
+            </p>
 
             {/* Options */}
             <div className="space-y-4">
@@ -151,7 +175,10 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
                   <label className="text-sm font-medium text-wood-900">
                     Finish Options
                   </label>
-                  <Select value={selectedFinish} onValueChange={setSelectedFinish}>
+                  <Select
+                    value={selectedFinish}
+                    onValueChange={setSelectedFinish}
+                  >
                     <SelectTrigger>
                       <SelectValue placeholder="Select finish" />
                     </SelectTrigger>
@@ -167,8 +194,13 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
               )}
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-wood-900">Quantity</label>
-                <Select value={quantity.toString()} onValueChange={(value) => setQuantity(parseInt(value))}>
+                <label className="text-sm font-medium text-wood-900">
+                  Quantity
+                </label>
+                <Select
+                  value={quantity.toString()}
+                  onValueChange={(value) => setQuantity(parseInt(value))}
+                >
                   <SelectTrigger className="w-24">
                     <SelectValue />
                   </SelectTrigger>
@@ -185,7 +217,7 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
 
             {/* Action Buttons */}
             <div className="space-y-3">
-              <Button 
+              <Button
                 className="w-full bg-wood-600 hover:bg-wood-700"
                 size="lg"
                 disabled={!product.inStock}
@@ -193,7 +225,7 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
                 <ShoppingCart className="mr-2 h-5 w-5" />
                 Add to Cart - ${(product.price * quantity).toLocaleString()}
               </Button>
-              
+
               <div className="flex space-x-3">
                 <Button variant="outline" className="flex-1">
                   <Heart className="mr-2 h-4 w-4" />
@@ -209,26 +241,35 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
 
             {/* Product Info */}
             <div className="space-y-4">
-              <h3 className="font-semibold text-wood-900">Product Information</h3>
-              
+              <h3 className="font-semibold text-wood-900">
+                Product Information
+              </h3>
+
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
                   <span className="text-wood-600">Wood Type:</span>
-                  <p className="font-medium text-wood-900">{product.woodType}</p>
+                  <p className="font-medium text-wood-900">
+                    {product.woodType}
+                  </p>
                 </div>
                 <div>
                   <span className="text-wood-600">Dimensions:</span>
                   <p className="font-medium text-wood-900">
-                    {product.dimensions.width}" × {product.dimensions.height}" × {product.dimensions.depth}"
+                    {product.dimensions.width}" × {product.dimensions.height}" ×{" "}
+                    {product.dimensions.depth}"
                   </p>
                 </div>
                 <div>
                   <span className="text-wood-600">Weight:</span>
-                  <p className="font-medium text-wood-900">{product.weight} lbs</p>
+                  <p className="font-medium text-wood-900">
+                    {product.weight} lbs
+                  </p>
                 </div>
                 <div>
                   <span className="text-wood-600">Crafting Time:</span>
-                  <p className="font-medium text-wood-900">{product.craftingTime}</p>
+                  <p className="font-medium text-wood-900">
+                    {product.craftingTime}
+                  </p>
                 </div>
               </div>
 
@@ -237,7 +278,10 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
                 <span className="text-wood-600 text-sm">Key Features:</span>
                 <ul className="mt-2 space-y-1">
                   {product.features.map((feature, index) => (
-                    <li key={index} className="text-sm text-wood-700 flex items-start">
+                    <li
+                      key={index}
+                      className="text-sm text-wood-700 flex items-start"
+                    >
                       <span className="w-1 h-1 bg-wood-400 rounded-full mt-2 mr-2 flex-shrink-0" />
                       {feature}
                     </li>

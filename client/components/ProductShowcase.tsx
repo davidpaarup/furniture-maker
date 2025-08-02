@@ -81,13 +81,27 @@ export default function ProductShowcase() {
                 {/* Product Image */}
                 <div className="relative aspect-square bg-gradient-to-br from-wood-100 to-wood-200 rounded-t-lg overflow-hidden">
                   <img
-                    src={`https://images.pexels.com/photos/${product.image === 'dining-table' ? '2325302' :
-                          product.image === 'bookshelf' ? '11112738' :
-                          product.image === 'coffee-table' ? '608127' :
-                          product.image === 'desk' ? '3143813' : '11112738'}/pexels-photo-${product.image === 'dining-table' ? '2325302' :
-                          product.image === 'bookshelf' ? '11112738' :
-                          product.image === 'coffee-table' ? '608127' :
-                          product.image === 'desk' ? '3143813' : '11112738'}.jpeg`}
+                    src={`https://images.pexels.com/photos/${
+                      product.image === "dining-table"
+                        ? "2325302"
+                        : product.image === "bookshelf"
+                          ? "11112738"
+                          : product.image === "coffee-table"
+                            ? "608127"
+                            : product.image === "desk"
+                              ? "3143813"
+                              : "11112738"
+                    }/pexels-photo-${
+                      product.image === "dining-table"
+                        ? "2325302"
+                        : product.image === "bookshelf"
+                          ? "11112738"
+                          : product.image === "coffee-table"
+                            ? "608127"
+                            : product.image === "desk"
+                              ? "3143813"
+                              : "11112738"
+                    }.jpeg`}
                     alt={product.name}
                     className="w-full h-full object-cover"
                     loading="lazy"

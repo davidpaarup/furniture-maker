@@ -1,14 +1,35 @@
 import { useState, useMemo } from "react";
-import { Search, Filter, Grid3X3, List, Heart, ShoppingCart, Star } from "lucide-react";
+import {
+  Search,
+  Filter,
+  Grid3X3,
+  List,
+  Heart,
+  ShoppingCart,
+  Star,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Separator } from "@/components/ui/separator";
-import { furnitureProducts, categories, woodTypes, priceRanges, sortOptions, Product } from "@/data/products";
+import {
+  furnitureProducts,
+  categories,
+  woodTypes,
+  priceRanges,
+  sortOptions,
+  Product,
+} from "@/data/products";
 import ProductDetailModal from "@/components/ProductDetailModal";
 
 export default function Furniture() {
@@ -33,9 +54,14 @@ export default function Furniture() {
   const filteredProducts = useMemo(() => {
     let filtered = furnitureProducts.filter((product) => {
       // Search query
-      if (searchQuery && !product.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
-          !product.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
-          !product.category.toLowerCase().includes(searchQuery.toLowerCase())) {
+      if (
+        searchQuery &&
+        !product.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        !product.description
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase()) &&
+        !product.category.toLowerCase().includes(searchQuery.toLowerCase())
+      ) {
         return false;
       }
 
@@ -45,7 +71,10 @@ export default function Furniture() {
       }
 
       // Wood type filter
-      if (selectedWoodType !== "All Wood Types" && product.woodType !== selectedWoodType) {
+      if (
+        selectedWoodType !== "All Wood Types" &&
+        product.woodType !== selectedWoodType
+      ) {
         return false;
       }
 
@@ -82,11 +111,20 @@ export default function Furniture() {
         break;
       default:
         // Featured - keep bestsellers first
-        filtered.sort((a, b) => (b.isBestseller ? 1 : 0) - (a.isBestseller ? 1 : 0));
+        filtered.sort(
+          (a, b) => (b.isBestseller ? 1 : 0) - (a.isBestseller ? 1 : 0),
+        );
     }
 
     return filtered;
-  }, [searchQuery, selectedCategory, selectedWoodType, priceRange, sortBy, filterOptions]);
+  }, [
+    searchQuery,
+    selectedCategory,
+    selectedWoodType,
+    priceRange,
+    sortBy,
+    filterOptions,
+  ]);
 
   const openProductDetail = (product: Product) => {
     setSelectedProduct(product);
@@ -108,8 +146,8 @@ export default function Furniture() {
               Furniture Collection
             </h1>
             <p className="text-wood-600 max-w-2xl mx-auto">
-              Discover our complete range of handcrafted wooden furniture, 
-              each piece carefully designed and built to last generations.
+              Discover our complete range of handcrafted wooden furniture, each
+              piece carefully designed and built to last generations.
             </p>
           </div>
         </div>
@@ -118,14 +156,18 @@ export default function Furniture() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Filters Sidebar */}
-          <div className={`lg:w-80 space-y-6 ${showFilters ? 'block' : 'hidden lg:block'}`}>
+          <div
+            className={`lg:w-80 space-y-6 ${showFilters ? "block" : "hidden lg:block"}`}
+          >
             <Card className="border-wood-200">
               <CardContent className="p-6 space-y-6">
                 <h3 className="font-semibold text-wood-900">Filters</h3>
 
                 {/* Search */}
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-wood-700">Search</label>
+                  <label className="text-sm font-medium text-wood-700">
+                    Search
+                  </label>
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-wood-400" />
                     <Input
@@ -141,8 +183,13 @@ export default function Furniture() {
 
                 {/* Category */}
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-wood-700">Category</label>
-                  <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+                  <label className="text-sm font-medium text-wood-700">
+                    Category
+                  </label>
+                  <Select
+                    value={selectedCategory}
+                    onValueChange={setSelectedCategory}
+                  >
                     <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>
@@ -158,8 +205,13 @@ export default function Furniture() {
 
                 {/* Wood Type */}
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-wood-700">Wood Type</label>
-                  <Select value={selectedWoodType} onValueChange={setSelectedWoodType}>
+                  <label className="text-sm font-medium text-wood-700">
+                    Wood Type
+                  </label>
+                  <Select
+                    value={selectedWoodType}
+                    onValueChange={setSelectedWoodType}
+                  >
                     <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>
@@ -176,7 +228,8 @@ export default function Furniture() {
                 {/* Price Range */}
                 <div className="space-y-4">
                   <label className="text-sm font-medium text-wood-700">
-                    Price Range: ${priceRange[0]} - ${priceRange[1] === 3000 ? '3000+' : priceRange[1]}
+                    Price Range: ${priceRange[0]} - $
+                    {priceRange[1] === 3000 ? "3000+" : priceRange[1]}
                   </label>
                   <Slider
                     value={priceRange}
@@ -191,57 +244,80 @@ export default function Furniture() {
 
                 {/* Additional Filters */}
                 <div className="space-y-4">
-                  <label className="text-sm font-medium text-wood-700">Additional Filters</label>
-                  
+                  <label className="text-sm font-medium text-wood-700">
+                    Additional Filters
+                  </label>
+
                   <div className="space-y-3">
                     <div className="flex items-center space-x-2">
-                      <Checkbox 
+                      <Checkbox
                         id="inStock"
                         checked={filterOptions.inStock}
-                        onCheckedChange={(checked) => 
-                          setFilterOptions(prev => ({ ...prev, inStock: !!checked }))
+                        onCheckedChange={(checked) =>
+                          setFilterOptions((prev) => ({
+                            ...prev,
+                            inStock: !!checked,
+                          }))
                         }
                       />
-                      <label htmlFor="inStock" className="text-sm text-wood-700">
+                      <label
+                        htmlFor="inStock"
+                        className="text-sm text-wood-700"
+                      >
                         In Stock Only
                       </label>
                     </div>
-                    
+
                     <div className="flex items-center space-x-2">
-                      <Checkbox 
+                      <Checkbox
                         id="isNew"
                         checked={filterOptions.isNew}
-                        onCheckedChange={(checked) => 
-                          setFilterOptions(prev => ({ ...prev, isNew: !!checked }))
+                        onCheckedChange={(checked) =>
+                          setFilterOptions((prev) => ({
+                            ...prev,
+                            isNew: !!checked,
+                          }))
                         }
                       />
                       <label htmlFor="isNew" className="text-sm text-wood-700">
                         New Arrivals
                       </label>
                     </div>
-                    
+
                     <div className="flex items-center space-x-2">
-                      <Checkbox 
+                      <Checkbox
                         id="isBestseller"
                         checked={filterOptions.isBestseller}
-                        onCheckedChange={(checked) => 
-                          setFilterOptions(prev => ({ ...prev, isBestseller: !!checked }))
+                        onCheckedChange={(checked) =>
+                          setFilterOptions((prev) => ({
+                            ...prev,
+                            isBestseller: !!checked,
+                          }))
                         }
                       />
-                      <label htmlFor="isBestseller" className="text-sm text-wood-700">
+                      <label
+                        htmlFor="isBestseller"
+                        className="text-sm text-wood-700"
+                      >
                         Bestsellers
                       </label>
                     </div>
-                    
+
                     <div className="flex items-center space-x-2">
-                      <Checkbox 
+                      <Checkbox
                         id="isCustomizable"
                         checked={filterOptions.isCustomizable}
-                        onCheckedChange={(checked) => 
-                          setFilterOptions(prev => ({ ...prev, isCustomizable: !!checked }))
+                        onCheckedChange={(checked) =>
+                          setFilterOptions((prev) => ({
+                            ...prev,
+                            isCustomizable: !!checked,
+                          }))
                         }
                       />
-                      <label htmlFor="isCustomizable" className="text-sm text-wood-700">
+                      <label
+                        htmlFor="isCustomizable"
+                        className="text-sm text-wood-700"
+                      >
                         Customizable
                       </label>
                     </div>
@@ -249,8 +325,8 @@ export default function Furniture() {
                 </div>
 
                 {/* Clear Filters */}
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   className="w-full"
                   onClick={() => {
                     setSearchQuery("");
@@ -285,9 +361,10 @@ export default function Furniture() {
                   <Filter className="h-4 w-4 mr-2" />
                   Filters
                 </Button>
-                
+
                 <p className="text-sm text-wood-600">
-                  {filteredProducts.length} of {furnitureProducts.length} products
+                  {filteredProducts.length} of {furnitureProducts.length}{" "}
+                  products
                 </p>
               </div>
 
@@ -330,25 +407,32 @@ export default function Furniture() {
 
             {/* Products Grid/List */}
             {filteredProducts.length > 0 ? (
-              <div className={viewMode === "grid" 
-                ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
-                : "space-y-4"
-              }>
+              <div
+                className={
+                  viewMode === "grid"
+                    ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
+                    : "space-y-4"
+                }
+              >
                 {filteredProducts.map((product) => (
-                  <Card 
-                    key={product.id} 
+                  <Card
+                    key={product.id}
                     className={`group cursor-pointer hover:shadow-xl transition-all duration-300 border-wood-200 ${
                       viewMode === "list" ? "flex" : ""
                     }`}
                     onClick={() => openProductDetail(product)}
                   >
-                    <CardContent className={`p-0 ${viewMode === "list" ? "flex w-full" : ""}`}>
+                    <CardContent
+                      className={`p-0 ${viewMode === "list" ? "flex w-full" : ""}`}
+                    >
                       {/* Product Image */}
-                      <div className={`relative bg-gradient-to-br from-wood-100 to-wood-200 overflow-hidden ${
-                        viewMode === "list" 
-                          ? "w-48 h-48 flex-shrink-0" 
-                          : "aspect-square rounded-t-lg"
-                      }`}>
+                      <div
+                        className={`relative bg-gradient-to-br from-wood-100 to-wood-200 overflow-hidden ${
+                          viewMode === "list"
+                            ? "w-48 h-48 flex-shrink-0"
+                            : "aspect-square rounded-t-lg"
+                        }`}
+                      >
                         {/* Product Image */}
                         <img
                           src={product.images[0]}
@@ -365,12 +449,18 @@ export default function Furniture() {
                             </Badge>
                           )}
                           {product.isNew && (
-                            <Badge variant="secondary" className="bg-green-100 text-green-800">
+                            <Badge
+                              variant="secondary"
+                              className="bg-green-100 text-green-800"
+                            >
                               New
                             </Badge>
                           )}
                           {!product.inStock && (
-                            <Badge variant="secondary" className="bg-red-100 text-red-800">
+                            <Badge
+                              variant="secondary"
+                              className="bg-red-100 text-red-800"
+                            >
                               Out of Stock
                             </Badge>
                           )}
@@ -391,9 +481,13 @@ export default function Furniture() {
                       </div>
 
                       {/* Product Info */}
-                      <div className={`p-4 space-y-3 ${viewMode === "list" ? "flex-1" : ""}`}>
+                      <div
+                        className={`p-4 space-y-3 ${viewMode === "list" ? "flex-1" : ""}`}
+                      >
                         <div>
-                          <p className="text-sm text-wood-500 font-medium">{product.category}</p>
+                          <p className="text-sm text-wood-500 font-medium">
+                            {product.category}
+                          </p>
                           <h3 className="font-semibold text-wood-900 group-hover:text-wood-600 transition-colors">
                             {product.name}
                           </h3>
@@ -435,7 +529,7 @@ export default function Furniture() {
                               </span>
                             )}
                           </div>
-                          
+
                           {viewMode === "list" && (
                             <Button
                               size="sm"
@@ -461,7 +555,9 @@ export default function Furniture() {
                             {product.isCustomizable && (
                               <>
                                 <span>•</span>
-                                <span className="text-wood-700 font-medium">Customizable</span>
+                                <span className="text-wood-700 font-medium">
+                                  Customizable
+                                </span>
                               </>
                             )}
                           </div>
@@ -476,9 +572,12 @@ export default function Furniture() {
                 <div className="w-16 h-16 bg-wood-100 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Search className="h-8 w-8 text-wood-400" />
                 </div>
-                <h3 className="font-semibold text-wood-900 mb-2">No products found</h3>
+                <h3 className="font-semibold text-wood-900 mb-2">
+                  No products found
+                </h3>
                 <p className="text-wood-600">
-                  Try adjusting your filters or search terms to find what you're looking for.
+                  Try adjusting your filters or search terms to find what you're
+                  looking for.
                 </p>
               </div>
             )}

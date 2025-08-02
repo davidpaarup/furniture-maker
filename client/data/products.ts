@@ -74,17 +74,21 @@ export const furnitureProducts: Product[] = [
     woodType: "Oak",
     dimensions: { width: 72, height: 30, depth: 36 },
     weight: 85,
-    description: "A beautiful handcrafted dining table made from solid oak with a rustic finish. Perfect for family gatherings and entertaining guests. Features a sturdy farmhouse-style base with mortise and tenon joinery.",
+    description:
+      "A beautiful handcrafted dining table made from solid oak with a rustic finish. Perfect for family gatherings and entertaining guests. Features a sturdy farmhouse-style base with mortise and tenon joinery.",
     features: [
       "Solid oak construction",
       "Hand-applied rustic finish",
       "Mortise and tenon joinery",
       "Seats 6-8 people comfortably",
-      "Scratch and water resistant coating"
+      "Scratch and water resistant coating",
     ],
     rating: 4.9,
     reviews: 47,
-    images: ["https://images.pexels.com/photos/2325302/pexels-photo-2325302.jpeg", "https://images.pexels.com/photos/2317542/pexels-photo-2317542.jpeg"],
+    images: [
+      "https://images.pexels.com/photos/2325302/pexels-photo-2325302.jpeg",
+      "https://images.pexels.com/photos/2317542/pexels-photo-2317542.jpeg",
+    ],
     inStock: true,
     isNew: false,
     isBestseller: true,
@@ -101,17 +105,20 @@ export const furnitureProducts: Product[] = [
     woodType: "Cherry",
     dimensions: { width: 36, height: 72, depth: 12 },
     weight: 45,
-    description: "Elegant cherry wood bookshelf with adjustable shelves and classic craftsman styling. Features beautiful grain patterns and hand-rubbed finish that highlights the natural beauty of the wood.",
+    description:
+      "Elegant cherry wood bookshelf with adjustable shelves and classic craftsman styling. Features beautiful grain patterns and hand-rubbed finish that highlights the natural beauty of the wood.",
     features: [
       "Solid cherry wood",
       "5 adjustable shelves",
       "Hand-rubbed finish",
       "Anti-tip safety features",
-      "Craftsman-style design"
+      "Craftsman-style design",
     ],
     rating: 4.8,
     reviews: 32,
-    images: ["https://images.pexels.com/photos/11112738/pexels-photo-11112738.jpeg"],
+    images: [
+      "https://images.pexels.com/photos/11112738/pexels-photo-11112738.jpeg",
+    ],
     inStock: true,
     isNew: true,
     isBestseller: false,
@@ -129,17 +136,21 @@ export const furnitureProducts: Product[] = [
     woodType: "Walnut",
     dimensions: { width: 48, height: 18, depth: 24 },
     weight: 35,
-    description: "Stunning walnut coffee table with vintage-inspired design. Features live edge details and hairpin legs for a perfect blend of rustic and modern aesthetics.",
+    description:
+      "Stunning walnut coffee table with vintage-inspired design. Features live edge details and hairpin legs for a perfect blend of rustic and modern aesthetics.",
     features: [
       "Live edge walnut slab",
       "Steel hairpin legs",
       "Natural wood grain",
       "Clear protective finish",
-      "Mid-century modern style"
+      "Mid-century modern style",
     ],
     rating: 4.7,
     reviews: 28,
-    images: ["https://images.pexels.com/photos/608127/pexels-photo-608127.jpeg", "https://images.pexels.com/photos/11112740/pexels-photo-11112740.jpeg"],
+    images: [
+      "https://images.pexels.com/photos/608127/pexels-photo-608127.jpeg",
+      "https://images.pexels.com/photos/11112740/pexels-photo-11112740.jpeg",
+    ],
     inStock: true,
     isNew: false,
     isBestseller: true,
@@ -156,17 +167,21 @@ export const furnitureProducts: Product[] = [
     woodType: "Mahogany",
     dimensions: { width: 60, height: 30, depth: 30 },
     weight: 75,
-    description: "Professional mahogany executive desk with traditional styling and modern functionality. Features built-in cable management and spacious drawers for office organization.",
+    description:
+      "Professional mahogany executive desk with traditional styling and modern functionality. Features built-in cable management and spacious drawers for office organization.",
     features: [
       "Solid mahogany construction",
       "3 spacious drawers",
       "Built-in cable management",
       "Leather desk pad included",
-      "Traditional dovetail joints"
+      "Traditional dovetail joints",
     ],
     rating: 4.9,
     reviews: 19,
-    images: ["https://images.pexels.com/photos/3143813/pexels-photo-3143813.jpeg", "https://images.pexels.com/photos/11112745/pexels-photo-11112745.jpeg"],
+    images: [
+      "https://images.pexels.com/photos/3143813/pexels-photo-3143813.jpeg",
+      "https://images.pexels.com/photos/11112745/pexels-photo-11112745.jpeg",
+    ],
     inStock: true,
     isNew: true,
     isBestseller: false,
@@ -183,17 +198,20 @@ export const furnitureProducts: Product[] = [
     woodType: "Pine",
     dimensions: { width: 18, height: 36, depth: 20 },
     weight: 12,
-    description: "Set of 2 farmhouse-style dining chairs crafted from sustainable pine. Features comfortable curved backs and sturdy construction perfect for everyday dining.",
+    description:
+      "Set of 2 farmhouse-style dining chairs crafted from sustainable pine. Features comfortable curved backs and sturdy construction perfect for everyday dining.",
     features: [
       "Sustainable pine wood",
       "Ergonomic curved back",
       "Sold in sets of 2",
       "Natural wood finish",
-      "Easy assembly"
+      "Easy assembly",
     ],
     rating: 4.6,
     reviews: 54,
-    images: ["https://images.pexels.com/photos/11112738/pexels-photo-11112738.jpeg"],
+    images: [
+      "https://images.pexels.com/photos/11112738/pexels-photo-11112738.jpeg",
+    ],
     inStock: true,
     isNew: false,
     isBestseller: true,
@@ -210,17 +228,20 @@ export const furnitureProducts: Product[] = [
     woodType: "Maple",
     dimensions: { width: 64, height: 14, depth: 84 },
     weight: 65,
-    description: "Minimalist maple platform bed frame with clean lines and modern design. No box spring required. Features smooth-sanded surfaces and eco-friendly finishes.",
+    description:
+      "Minimalist maple platform bed frame with clean lines and modern design. No box spring required. Features smooth-sanded surfaces and eco-friendly finishes.",
     features: [
       "Solid maple construction",
       "No box spring needed",
       "Queen size (King available)",
       "Low profile design",
-      "Eco-friendly finish"
+      "Eco-friendly finish",
     ],
     rating: 4.8,
     reviews: 41,
-    images: ["https://images.pexels.com/photos/30761844/pexels-photo-30761844.jpeg"],
+    images: [
+      "https://images.pexels.com/photos/30761844/pexels-photo-30761844.jpeg",
+    ],
     inStock: true,
     isNew: true,
     isBestseller: false,
@@ -237,17 +258,20 @@ export const furnitureProducts: Product[] = [
     woodType: "Birch",
     dimensions: { width: 24, height: 18, depth: 16 },
     weight: 18,
-    description: "Versatile storage ottoman with upholstered top and hidden storage compartment. Perfect for extra seating or as a coffee table with storage.",
+    description:
+      "Versatile storage ottoman with upholstered top and hidden storage compartment. Perfect for extra seating or as a coffee table with storage.",
     features: [
       "Hidden storage compartment",
       "Upholstered top cushion",
       "Birch wood frame",
       "Multiple fabric options",
-      "Dual-purpose functionality"
+      "Dual-purpose functionality",
     ],
     rating: 4.5,
     reviews: 23,
-    images: ["https://images.pexels.com/photos/11112745/pexels-photo-11112745.jpeg"],
+    images: [
+      "https://images.pexels.com/photos/11112745/pexels-photo-11112745.jpeg",
+    ],
     inStock: true,
     isNew: false,
     isBestseller: false,
@@ -264,17 +288,21 @@ export const furnitureProducts: Product[] = [
     woodType: "Cedar",
     dimensions: { width: 48, height: 34, depth: 20 },
     weight: 28,
-    description: "Weather-resistant cedar garden bench perfect for outdoor spaces. Features natural resistance to insects and moisture, with comfortable contoured seating.",
+    description:
+      "Weather-resistant cedar garden bench perfect for outdoor spaces. Features natural resistance to insects and moisture, with comfortable contoured seating.",
     features: [
       "Weather-resistant cedar",
       "Natural insect resistance",
       "Contoured seating",
       "Outdoor-rated finish",
-      "Easy maintenance"
+      "Easy maintenance",
     ],
     rating: 4.7,
     reviews: 18,
-    images: ["https://images.pexels.com/photos/15365/pexels-photo.jpg", "https://images.pexels.com/photos/11112741/pexels-photo-11112741.jpeg"],
+    images: [
+      "https://images.pexels.com/photos/15365/pexels-photo.jpg",
+      "https://images.pexels.com/photos/11112741/pexels-photo-11112741.jpeg",
+    ],
     inStock: true,
     isNew: false,
     isBestseller: false,
@@ -291,17 +319,20 @@ export const furnitureProducts: Product[] = [
     woodType: "Oak",
     dimensions: { width: 42, height: 24, depth: 20 },
     weight: 40,
-    description: "Space-saving corner TV stand with cable management and storage shelves. Perfect for modern living rooms with limited space.",
+    description:
+      "Space-saving corner TV stand with cable management and storage shelves. Perfect for modern living rooms with limited space.",
     features: [
       "Corner space optimization",
       "Cable management system",
       "Two storage shelves",
-      "Supports TVs up to 55\"",
-      "Solid oak construction"
+      'Supports TVs up to 55"',
+      "Solid oak construction",
     ],
     rating: 4.6,
     reviews: 31,
-    images: ["https://images.pexels.com/photos/11112745/pexels-photo-11112745.jpeg"],
+    images: [
+      "https://images.pexels.com/photos/11112745/pexels-photo-11112745.jpeg",
+    ],
     inStock: false,
     isNew: false,
     isBestseller: false,
@@ -318,17 +349,20 @@ export const furnitureProducts: Product[] = [
     woodType: "Walnut",
     dimensions: { width: 20, height: 6, depth: 12 },
     weight: 8,
-    description: "Modern floating nightstand with hidden drawer and minimalist design. Mounts securely to wall for a clean, contemporary look.",
+    description:
+      "Modern floating nightstand with hidden drawer and minimalist design. Mounts securely to wall for a clean, contemporary look.",
     features: [
       "Wall-mounted design",
       "Hidden soft-close drawer",
       "Minimalist profile",
       "Easy installation",
-      "Walnut wood grain"
+      "Walnut wood grain",
     ],
     rating: 4.8,
     reviews: 26,
-    images: ["https://images.pexels.com/photos/11112745/pexels-photo-11112745.jpeg"],
+    images: [
+      "https://images.pexels.com/photos/11112745/pexels-photo-11112745.jpeg",
+    ],
     inStock: true,
     isNew: true,
     isBestseller: false,
@@ -345,17 +379,21 @@ export const furnitureProducts: Product[] = [
     woodType: "Cherry",
     dimensions: { width: 72, height: 36, depth: 18 },
     weight: 85,
-    description: "Elegant cherry wood sideboard with ample storage for dining room essentials. Features soft-close doors and adjustable shelving.",
+    description:
+      "Elegant cherry wood sideboard with ample storage for dining room essentials. Features soft-close doors and adjustable shelving.",
     features: [
       "Solid cherry construction",
       "Soft-close cabinet doors",
       "Adjustable interior shelving",
       "Wine glass storage",
-      "Hand-rubbed finish"
+      "Hand-rubbed finish",
     ],
     rating: 4.9,
     reviews: 15,
-    images: ["https://images.pexels.com/photos/11112740/pexels-photo-11112740.jpeg", "https://images.pexels.com/photos/2325302/pexels-photo-2325302.jpeg"],
+    images: [
+      "https://images.pexels.com/photos/11112740/pexels-photo-11112740.jpeg",
+      "https://images.pexels.com/photos/2325302/pexels-photo-2325302.jpeg",
+    ],
     inStock: true,
     isNew: false,
     isBestseller: true,
@@ -372,17 +410,20 @@ export const furnitureProducts: Product[] = [
     woodType: "Maple",
     dimensions: { width: 28, height: 32, depth: 30 },
     weight: 22,
-    description: "Comfortable accent chair with maple frame and premium upholstery. Perfect for reading nooks or as additional seating in living spaces.",
+    description:
+      "Comfortable accent chair with maple frame and premium upholstery. Perfect for reading nooks or as additional seating in living spaces.",
     features: [
       "Maple wood frame",
       "Premium fabric upholstery",
       "Ergonomic design",
       "Multiple color options",
-      "Sturdy construction"
+      "Sturdy construction",
     ],
     rating: 4.7,
     reviews: 39,
-    images: ["https://images.pexels.com/photos/11112735/pexels-photo-11112735.jpeg"],
+    images: [
+      "https://images.pexels.com/photos/11112735/pexels-photo-11112735.jpeg",
+    ],
     inStock: true,
     isNew: false,
     isBestseller: false,
