@@ -15,6 +15,7 @@ const featuredProducts = furnitureProducts.slice(0, 4);
 
 export default function ProductShowcase() {
   const { addToCart } = useCart();
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const { toast } = useToast();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
