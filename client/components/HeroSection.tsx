@@ -93,20 +93,11 @@ export default function HeroSection() {
           {/* Hero Image */}
           <div className="relative">
             <div className="aspect-square bg-gradient-to-br from-wood-200 to-wood-300 rounded-2xl shadow-2xl overflow-hidden">
-              {/* Placeholder for hero image */}
-              <div className="w-full h-full flex items-center justify-center bg-wood-200">
-                <div className="text-center space-y-4">
-                  <div className="w-24 h-24 bg-wood-400 rounded-full mx-auto flex items-center justify-center">
-                    <Hammer className="h-12 w-12 text-wood-100" />
-                  </div>
-                  <p className="text-wood-600 font-medium">
-                    Beautiful Wooden Furniture
-                  </p>
-                  <p className="text-wood-500 text-sm">
-                    Hero image placeholder
-                  </p>
-                </div>
-              </div>
+              <img
+                src="https://images.pexels.com/photos/2325302/pexels-photo-2325302.jpeg"
+                alt="Beautiful handcrafted wooden dining table"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Floating Card */}
