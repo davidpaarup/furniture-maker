@@ -47,6 +47,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        wood: {
+          50: "hsl(45, 35%, 95%)",
+          100: "hsl(40, 30%, 88%)",
+          200: "hsl(35, 25%, 75%)",
+          300: "hsl(30, 22%, 62%)",
+          400: "hsl(25, 20%, 50%)",
+          500: "hsl(25, 60%, 45%)",
+          600: "hsl(20, 55%, 38%)",
+          700: "hsl(18, 50%, 32%)",
+          800: "hsl(16, 45%, 26%)",
+          900: "hsl(14, 40%, 20%)",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
