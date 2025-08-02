@@ -142,6 +142,14 @@ export default function ProductShowcase() {
                     <Button
                       className="w-full bg-wood-600 hover:bg-wood-700"
                       size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        addToCart(product, 1);
+                        toast({
+                          title: "Added to cart!",
+                          description: `${product.name} added to your cart.`,
+                        });
+                      }}
                     >
                       Quick Shop
                     </Button>
