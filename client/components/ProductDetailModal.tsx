@@ -48,15 +48,11 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
           <div className="space-y-4">
             {/* Main Image */}
             <div className="aspect-square bg-gradient-to-br from-wood-100 to-wood-200 rounded-lg overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center space-y-2">
-                  <div className="w-24 h-24 bg-wood-300 rounded-lg mx-auto flex items-center justify-center">
-                    <ShoppingCart className="h-12 w-12 text-wood-600" />
-                  </div>
-                  <p className="text-wood-600 font-medium">{product.name}</p>
-                  <p className="text-wood-500 text-sm">Image {currentImageIndex + 1}</p>
-                </div>
-              </div>
+              <img
+                src={product.images[currentImageIndex]}
+                alt={`${product.name} - Image ${currentImageIndex + 1}`}
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Image Thumbnails */}
