@@ -9,7 +9,9 @@ import CartDrawer from "@/components/CartDrawer";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isWishlistOpen, setIsWishlistOpen] = useState(false);
   const { totalItems } = useCart();
+  const { items: wishlistItems } = useWishlist();
 
   return (
     <>
