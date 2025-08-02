@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Star, ShoppingCart, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -5,6 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { useCart } from "@/hooks/useCart";
+import ProductDetailModal from "@/components/ProductDetailModal";
+import { Product } from "@/data/products";
 
 const featuredProducts = [
   {
