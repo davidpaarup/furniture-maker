@@ -543,7 +543,11 @@ export default function Furniture() {
                               disabled={!product.inStock}
                               onClick={(e) => {
                                 e.stopPropagation();
-                                // Handle add to cart
+                                addToCart(product, 1);
+                                toast({
+                                  title: "Added to cart!",
+                                  description: `${product.name} added to your cart.`,
+                                });
                               }}
                             >
                               <ShoppingCart className="h-4 w-4 mr-2" />
