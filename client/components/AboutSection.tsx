@@ -78,16 +78,11 @@ export default function AboutSection() {
           {/* Image */}
           <div className="relative">
             <div className="aspect-[4/5] bg-gradient-to-br from-wood-200 to-wood-300 rounded-2xl overflow-hidden">
-              {/* Placeholder for workshop/craftsman image */}
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-24 h-24 bg-wood-400 rounded-full mx-auto flex items-center justify-center">
-                    <Leaf className="h-12 w-12 text-wood-100" />
-                  </div>
-                  <p className="text-wood-600 font-medium">Our Workshop</p>
-                  <p className="text-wood-500 text-sm">Craftsman at work</p>
-                </div>
-              </div>
+              <img
+                src="https://images.pexels.com/photos/5095283/pexels-photo-5095283.jpeg"
+                alt="Master craftsman working in our woodworking workshop"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Stats Card */}
